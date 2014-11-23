@@ -1,0 +1,513 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		36D638291A22287B00D36077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D638281A22287B00D36077 /* AppDelegate.swift */; };
+		36D6382B1A22287B00D36077 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D6382A1A22287B00D36077 /* ViewController.swift */; };
+		36D6382E1A22287B00D36077 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36D6382C1A22287B00D36077 /* Main.storyboard */; };
+		36D638301A22287B00D36077 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36D6382F1A22287B00D36077 /* Images.xcassets */; };
+		36D638331A22287B00D36077 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36D638311A22287B00D36077 /* LaunchScreen.xib */; };
+		36D6383F1A22287B00D36077 /* SubmailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D6383E1A22287B00D36077 /* SubmailTests.swift */; };
+		36D638491A22289000D36077 /* Mail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D638481A22289000D36077 /* Mail.swift */; };
+		36D6384B1A22289B00D36077 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D6384A1A22289B00D36077 /* Message.swift */; };
+		36D6384D1A2228AA00D36077 /* MailSend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D6384C1A2228AA00D36077 /* MailSend.swift */; };
+		36D6384F1A22291200D36077 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D6384E1A22291200D36077 /* Config.swift */; };
+		36D6385C1A2229A600D36077 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 36D638561A22296800D36077 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		36D638391A22287B00D36077 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36D6381B1A22287B00D36077 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36D638221A22287B00D36077;
+			remoteInfo = Submail;
+		};
+		36D638551A22296800D36077 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36D638501A22296800D36077 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		36D638571A22296800D36077 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36D638501A22296800D36077 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		36D638591A22298700D36077 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36D638501A22296800D36077 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		36D6385B1A22299000D36077 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				36D6385C1A2229A600D36077 /* Alamofire.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		36D638231A22287B00D36077 /* Submail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Submail.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		36D638271A22287B00D36077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36D638281A22287B00D36077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		36D6382A1A22287B00D36077 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		36D6382D1A22287B00D36077 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		36D6382F1A22287B00D36077 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		36D638321A22287B00D36077 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		36D638381A22287B00D36077 /* SubmailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubmailTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		36D6383D1A22287B00D36077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36D6383E1A22287B00D36077 /* SubmailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmailTests.swift; sourceTree = "<group>"; };
+		36D638481A22289000D36077 /* Mail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mail.swift; sourceTree = "<group>"; };
+		36D6384A1A22289B00D36077 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		36D6384C1A2228AA00D36077 /* MailSend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailSend.swift; sourceTree = "<group>"; };
+		36D6384E1A22291200D36077 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		36D638501A22296800D36077 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		36D638201A22287B00D36077 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36D638351A22287B00D36077 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		36D6381A1A22287B00D36077 = {
+			isa = PBXGroup;
+			children = (
+				36D638501A22296800D36077 /* Alamofire.xcodeproj */,
+				36D638251A22287B00D36077 /* Submail */,
+				36D6383B1A22287B00D36077 /* SubmailTests */,
+				36D638241A22287B00D36077 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		36D638241A22287B00D36077 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				36D638231A22287B00D36077 /* Submail.app */,
+				36D638381A22287B00D36077 /* SubmailTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		36D638251A22287B00D36077 /* Submail */ = {
+			isa = PBXGroup;
+			children = (
+				36D638281A22287B00D36077 /* AppDelegate.swift */,
+				36D6382A1A22287B00D36077 /* ViewController.swift */,
+				36D638481A22289000D36077 /* Mail.swift */,
+				36D6384A1A22289B00D36077 /* Message.swift */,
+				36D6384E1A22291200D36077 /* Config.swift */,
+				36D6384C1A2228AA00D36077 /* MailSend.swift */,
+				36D6382C1A22287B00D36077 /* Main.storyboard */,
+				36D6382F1A22287B00D36077 /* Images.xcassets */,
+				36D638311A22287B00D36077 /* LaunchScreen.xib */,
+				36D638261A22287B00D36077 /* Supporting Files */,
+			);
+			path = Submail;
+			sourceTree = "<group>";
+		};
+		36D638261A22287B00D36077 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				36D638271A22287B00D36077 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		36D6383B1A22287B00D36077 /* SubmailTests */ = {
+			isa = PBXGroup;
+			children = (
+				36D6383E1A22287B00D36077 /* SubmailTests.swift */,
+				36D6383C1A22287B00D36077 /* Supporting Files */,
+			);
+			path = SubmailTests;
+			sourceTree = "<group>";
+		};
+		36D6383C1A22287B00D36077 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				36D6383D1A22287B00D36077 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		36D638511A22296800D36077 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				36D638561A22296800D36077 /* Alamofire.framework */,
+				36D638581A22296800D36077 /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		36D638221A22287B00D36077 /* Submail */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36D638421A22287B00D36077 /* Build configuration list for PBXNativeTarget "Submail" */;
+			buildPhases = (
+				36D6381F1A22287B00D36077 /* Sources */,
+				36D638201A22287B00D36077 /* Frameworks */,
+				36D638211A22287B00D36077 /* Resources */,
+				36D6385B1A22299000D36077 /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				36D6385A1A22298700D36077 /* PBXTargetDependency */,
+			);
+			name = Submail;
+			productName = Submail;
+			productReference = 36D638231A22287B00D36077 /* Submail.app */;
+			productType = "com.apple.product-type.application";
+		};
+		36D638371A22287B00D36077 /* SubmailTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36D638451A22287B00D36077 /* Build configuration list for PBXNativeTarget "SubmailTests" */;
+			buildPhases = (
+				36D638341A22287B00D36077 /* Sources */,
+				36D638351A22287B00D36077 /* Frameworks */,
+				36D638361A22287B00D36077 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				36D6383A1A22287B00D36077 /* PBXTargetDependency */,
+			);
+			name = SubmailTests;
+			productName = SubmailTests;
+			productReference = 36D638381A22287B00D36077 /* SubmailTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		36D6381B1A22287B00D36077 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = jin.shang;
+				TargetAttributes = {
+					36D638221A22287B00D36077 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					36D638371A22287B00D36077 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 36D638221A22287B00D36077;
+					};
+				};
+			};
+			buildConfigurationList = 36D6381E1A22287B00D36077 /* Build configuration list for PBXProject "Submail" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 36D6381A1A22287B00D36077;
+			productRefGroup = 36D638241A22287B00D36077 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 36D638511A22296800D36077 /* Products */;
+					ProjectRef = 36D638501A22296800D36077 /* Alamofire.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				36D638221A22287B00D36077 /* Submail */,
+				36D638371A22287B00D36077 /* SubmailTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		36D638561A22296800D36077 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 36D638551A22296800D36077 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		36D638581A22296800D36077 /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = 36D638571A22296800D36077 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		36D638211A22287B00D36077 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36D6382E1A22287B00D36077 /* Main.storyboard in Resources */,
+				36D638331A22287B00D36077 /* LaunchScreen.xib in Resources */,
+				36D638301A22287B00D36077 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36D638361A22287B00D36077 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		36D6381F1A22287B00D36077 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36D6384D1A2228AA00D36077 /* MailSend.swift in Sources */,
+				36D638491A22289000D36077 /* Mail.swift in Sources */,
+				36D6384B1A22289B00D36077 /* Message.swift in Sources */,
+				36D6382B1A22287B00D36077 /* ViewController.swift in Sources */,
+				36D638291A22287B00D36077 /* AppDelegate.swift in Sources */,
+				36D6384F1A22291200D36077 /* Config.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36D638341A22287B00D36077 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36D6383F1A22287B00D36077 /* SubmailTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		36D6383A1A22287B00D36077 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 36D638221A22287B00D36077 /* Submail */;
+			targetProxy = 36D638391A22287B00D36077 /* PBXContainerItemProxy */;
+		};
+		36D6385A1A22298700D36077 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = 36D638591A22298700D36077 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		36D6382C1A22287B00D36077 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36D6382D1A22287B00D36077 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		36D638311A22287B00D36077 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36D638321A22287B00D36077 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		36D638401A22287B00D36077 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		36D638411A22287B00D36077 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		36D638431A22287B00D36077 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Submail/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		36D638441A22287B00D36077 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Submail/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		36D638461A22287B00D36077 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SubmailTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Submail.app/Submail";
+			};
+			name = Debug;
+		};
+		36D638471A22287B00D36077 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SubmailTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Submail.app/Submail";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		36D6381E1A22287B00D36077 /* Build configuration list for PBXProject "Submail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36D638401A22287B00D36077 /* Debug */,
+				36D638411A22287B00D36077 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36D638421A22287B00D36077 /* Build configuration list for PBXNativeTarget "Submail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36D638431A22287B00D36077 /* Debug */,
+				36D638441A22287B00D36077 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		36D638451A22287B00D36077 /* Build configuration list for PBXNativeTarget "SubmailTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36D638461A22287B00D36077 /* Debug */,
+				36D638471A22287B00D36077 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 36D6381B1A22287B00D36077 /* Project object */;
+}
