@@ -1,20 +1,14 @@
 //
-//  MailSend.swift
+//  MailXSend.swift
 //  Submail
 //
-//  Created by jin.shang on 14-11-23.
+//  Created by jins on 14/11/24.
 //  Copyright (c) 2014年 jin.shang. All rights reserved.
 //
 
 import Foundation
 
-class MailSend {
-    // appid
-    // from
-    // subject
-    // signature
-    
-    // optional
+class MailXSend {
     var to = [(String, String?)]()
     var from: String = ""
     var fromName: String?
@@ -22,12 +16,10 @@ class MailSend {
     var cc = [(String, String?)]()
     var bcc = [(String, String?)]()
     var reply: String?
-    var subject: String = ""
-    var text: String?
-    var html: String?
+    var subject: String?
+    var project: String = ""
     var vars = [String: String]()
     var links = [String: String]()
-    var attachments = [String]()
     var headers = [String: String]()
     
     var config: MailConfig
@@ -67,17 +59,13 @@ class MailSend {
     func add_bcc(address: String, _ name: String? = nil) {
         self.bcc.append((address, name))
     }
-
+    
     func set_subject(subject: String) {
         self.subject = subject
     }
     
-    func set_text(text: String) {
-        self.text = text
-    }
-    
-    func set_html(html: String) {
-        self.html = html
+    func set_project(project: String) {
+        self.project = project
     }
     
     func add_var(key: String, _ val: String) {
@@ -86,10 +74,6 @@ class MailSend {
     
     func add_link(key: String, _ val: String) {
         self.links[key] = val
-    }
-    
-    func add_attachment(attachment: String) {
-        self.attachments.append(attachment)
     }
     
     func add_header(key: String, _ val: String) {
@@ -155,24 +139,20 @@ class MailSend {
             params["bcc"] = bccValue.substringToIndex(advance(bccValue.startIndex, bccValue.utf16Count-1))
         }
         
-        params["subject"] = self.subject
+        params["project"] = self.project
         
-        if self.text != nil {
-            params["text"] = self.text!
-        }
-        
-        if self.html != nil {
-            params["html"] = self.html!
+        if self.subject != nil {
+            params["subject"] = self.subject!
+        } else {
+            params["subject"] = self.project
         }
         
         // vars and links and headers need json
         
-        // attachment
-        
         return params
     }
     
-    func send(completion: (AnyObject? -> Void)? = nil) {
+    func xsend(completion: (AnyObject? -> Void)? = nil) {
         let mail = Mail(config: self.config)
         mail.send(build_params()) {
             json in

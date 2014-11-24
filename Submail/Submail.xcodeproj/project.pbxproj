@@ -17,7 +17,18 @@
 		36D6384B1A22289B00D36077 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D6384A1A22289B00D36077 /* Message.swift */; };
 		36D6384D1A2228AA00D36077 /* MailSend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D6384C1A2228AA00D36077 /* MailSend.swift */; };
 		36D6384F1A22291200D36077 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D6384E1A22291200D36077 /* Config.swift */; };
-		36D6385C1A2229A600D36077 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 36D638561A22296800D36077 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		77596AAD1A232D1C00053E3B /* AddressbookMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77596AAC1A232D1C00053E3B /* AddressbookMail.swift */; };
+		77596AB01A232D3A00053E3B /* AddressbookMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77596AAF1A232D3A00053E3B /* AddressbookMessage.swift */; };
+		77596AB41A23351A00053E3B /* AddressbookMailSubscribeDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77596AB31A23351A00053E3B /* AddressbookMailSubscribeDemo.swift */; };
+		77596AB61A23354700053E3B /* AddressbookMailUnsubscribeDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77596AB51A23354700053E3B /* AddressbookMailUnsubscribeDemo.swift */; };
+		77596AB81A23356000053E3B /* AddressbookMessageSubscribeDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77596AB71A23356000053E3B /* AddressbookMessageSubscribeDemo.swift */; };
+		77596ABA1A23358200053E3B /* AddressbookMessageUnsubscribeDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77596AB91A23358200053E3B /* AddressbookMessageUnsubscribeDemo.swift */; };
+		77596ABF1A23374100053E3B /* MessageXSendDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77596ABE1A23374100053E3B /* MessageXSendDemo.swift */; };
+		77596AC11A23375800053E3B /* MessageXSend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77596AC01A23375800053E3B /* MessageXSend.swift */; };
+		778A5E811A22CC10004015AF /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 778A5E7C1A22CBFF004015AF /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		778A5E831A22CC94004015AF /* MailSendDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778A5E821A22CC94004015AF /* MailSendDemo.swift */; };
+		778A5E851A22CCD6004015AF /* MailXSend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778A5E841A22CCD6004015AF /* MailXSend.swift */; };
+		778A5E871A22CCE5004015AF /* MailXSendDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778A5E861A22CCE5004015AF /* MailXSendDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,23 +39,23 @@
 			remoteGlobalIDString = 36D638221A22287B00D36077;
 			remoteInfo = Submail;
 		};
-		36D638551A22296800D36077 /* PBXContainerItemProxy */ = {
+		778A5E7B1A22CBFF004015AF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 36D638501A22296800D36077 /* Alamofire.xcodeproj */;
+			containerPortal = 778A5E761A22CBFF004015AF /* Alamofire.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
 			remoteInfo = Alamofire;
 		};
-		36D638571A22296800D36077 /* PBXContainerItemProxy */ = {
+		778A5E7D1A22CBFF004015AF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 36D638501A22296800D36077 /* Alamofire.xcodeproj */;
+			containerPortal = 778A5E761A22CBFF004015AF /* Alamofire.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
 			remoteInfo = AlamofireTests;
 		};
-		36D638591A22298700D36077 /* PBXContainerItemProxy */ = {
+		778A5E7F1A22CC08004015AF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 36D638501A22296800D36077 /* Alamofire.xcodeproj */;
+			containerPortal = 778A5E761A22CBFF004015AF /* Alamofire.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
 			remoteInfo = Alamofire;
@@ -58,7 +69,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				36D6385C1A2229A600D36077 /* Alamofire.framework in Copy Frameworks */,
+				778A5E811A22CC10004015AF /* Alamofire.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,7 +91,18 @@
 		36D6384A1A22289B00D36077 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		36D6384C1A2228AA00D36077 /* MailSend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailSend.swift; sourceTree = "<group>"; };
 		36D6384E1A22291200D36077 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		36D638501A22296800D36077 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		77596AAC1A232D1C00053E3B /* AddressbookMail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressbookMail.swift; sourceTree = "<group>"; };
+		77596AAF1A232D3A00053E3B /* AddressbookMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressbookMessage.swift; sourceTree = "<group>"; };
+		77596AB31A23351A00053E3B /* AddressbookMailSubscribeDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressbookMailSubscribeDemo.swift; path = ../AddressbookMailSubscribeDemo.swift; sourceTree = "<group>"; };
+		77596AB51A23354700053E3B /* AddressbookMailUnsubscribeDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressbookMailUnsubscribeDemo.swift; path = ../AddressbookMailUnsubscribeDemo.swift; sourceTree = "<group>"; };
+		77596AB71A23356000053E3B /* AddressbookMessageSubscribeDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressbookMessageSubscribeDemo.swift; path = ../AddressbookMessageSubscribeDemo.swift; sourceTree = "<group>"; };
+		77596AB91A23358200053E3B /* AddressbookMessageUnsubscribeDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressbookMessageUnsubscribeDemo.swift; path = ../AddressbookMessageUnsubscribeDemo.swift; sourceTree = "<group>"; };
+		77596ABE1A23374100053E3B /* MessageXSendDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageXSendDemo.swift; sourceTree = "<group>"; };
+		77596AC01A23375800053E3B /* MessageXSend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageXSend.swift; sourceTree = "<group>"; };
+		778A5E761A22CBFF004015AF /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		778A5E821A22CC94004015AF /* MailSendDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MailSendDemo.swift; path = ../MailSendDemo.swift; sourceTree = "<group>"; };
+		778A5E841A22CCD6004015AF /* MailXSend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailXSend.swift; sourceTree = "<group>"; };
+		778A5E861A22CCE5004015AF /* MailXSendDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MailXSendDemo.swift; path = ../MailXSendDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +126,7 @@
 		36D6381A1A22287B00D36077 = {
 			isa = PBXGroup;
 			children = (
-				36D638501A22296800D36077 /* Alamofire.xcodeproj */,
+				778A5E761A22CBFF004015AF /* Alamofire.xcodeproj */,
 				36D638251A22287B00D36077 /* Submail */,
 				36D6383B1A22287B00D36077 /* SubmailTests */,
 				36D638241A22287B00D36077 /* Products */,
@@ -123,12 +145,17 @@
 		36D638251A22287B00D36077 /* Submail */ = {
 			isa = PBXGroup;
 			children = (
+				77596ABB1A2336C200053E3B /* Demo */,
 				36D638281A22287B00D36077 /* AppDelegate.swift */,
 				36D6382A1A22287B00D36077 /* ViewController.swift */,
+				77596AAC1A232D1C00053E3B /* AddressbookMail.swift */,
+				77596AAF1A232D3A00053E3B /* AddressbookMessage.swift */,
 				36D638481A22289000D36077 /* Mail.swift */,
 				36D6384A1A22289B00D36077 /* Message.swift */,
 				36D6384E1A22291200D36077 /* Config.swift */,
 				36D6384C1A2228AA00D36077 /* MailSend.swift */,
+				778A5E841A22CCD6004015AF /* MailXSend.swift */,
+				77596AC01A23375800053E3B /* MessageXSend.swift */,
 				36D6382C1A22287B00D36077 /* Main.storyboard */,
 				36D6382F1A22287B00D36077 /* Images.xcassets */,
 				36D638311A22287B00D36077 /* LaunchScreen.xib */,
@@ -162,11 +189,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		36D638511A22296800D36077 /* Products */ = {
+		77596ABB1A2336C200053E3B /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				36D638561A22296800D36077 /* Alamofire.framework */,
-				36D638581A22296800D36077 /* AlamofireTests.xctest */,
+				77596AB31A23351A00053E3B /* AddressbookMailSubscribeDemo.swift */,
+				77596AB51A23354700053E3B /* AddressbookMailUnsubscribeDemo.swift */,
+				77596AB71A23356000053E3B /* AddressbookMessageSubscribeDemo.swift */,
+				77596AB91A23358200053E3B /* AddressbookMessageUnsubscribeDemo.swift */,
+				778A5E821A22CC94004015AF /* MailSendDemo.swift */,
+				778A5E861A22CCE5004015AF /* MailXSendDemo.swift */,
+				77596ABE1A23374100053E3B /* MessageXSendDemo.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		778A5E771A22CBFF004015AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				778A5E7C1A22CBFF004015AF /* Alamofire.framework */,
+				778A5E7E1A22CBFF004015AF /* AlamofireTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,7 +227,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				36D6385A1A22298700D36077 /* PBXTargetDependency */,
+				778A5E801A22CC08004015AF /* PBXTargetDependency */,
 			);
 			name = Submail;
 			productName = Submail;
@@ -242,8 +283,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 36D638511A22296800D36077 /* Products */;
-					ProjectRef = 36D638501A22296800D36077 /* Alamofire.xcodeproj */;
+					ProductGroup = 778A5E771A22CBFF004015AF /* Products */;
+					ProjectRef = 778A5E761A22CBFF004015AF /* Alamofire.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -255,18 +296,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		36D638561A22296800D36077 /* Alamofire.framework */ = {
+		778A5E7C1A22CBFF004015AF /* Alamofire.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Alamofire.framework;
-			remoteRef = 36D638551A22296800D36077 /* PBXContainerItemProxy */;
+			remoteRef = 778A5E7B1A22CBFF004015AF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		36D638581A22296800D36077 /* AlamofireTests.xctest */ = {
+		778A5E7E1A22CBFF004015AF /* AlamofireTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = AlamofireTests.xctest;
-			remoteRef = 36D638571A22296800D36077 /* PBXContainerItemProxy */;
+			remoteRef = 778A5E7D1A22CBFF004015AF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -296,12 +337,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77596ABF1A23374100053E3B /* MessageXSendDemo.swift in Sources */,
+				77596AB81A23356000053E3B /* AddressbookMessageSubscribeDemo.swift in Sources */,
 				36D6384D1A2228AA00D36077 /* MailSend.swift in Sources */,
+				77596ABA1A23358200053E3B /* AddressbookMessageUnsubscribeDemo.swift in Sources */,
+				77596AB01A232D3A00053E3B /* AddressbookMessage.swift in Sources */,
 				36D638491A22289000D36077 /* Mail.swift in Sources */,
 				36D6384B1A22289B00D36077 /* Message.swift in Sources */,
+				77596AC11A23375800053E3B /* MessageXSend.swift in Sources */,
+				77596AB41A23351A00053E3B /* AddressbookMailSubscribeDemo.swift in Sources */,
+				778A5E831A22CC94004015AF /* MailSendDemo.swift in Sources */,
 				36D6382B1A22287B00D36077 /* ViewController.swift in Sources */,
 				36D638291A22287B00D36077 /* AppDelegate.swift in Sources */,
+				77596AAD1A232D1C00053E3B /* AddressbookMail.swift in Sources */,
+				778A5E871A22CCE5004015AF /* MailXSendDemo.swift in Sources */,
 				36D6384F1A22291200D36077 /* Config.swift in Sources */,
+				778A5E851A22CCD6004015AF /* MailXSend.swift in Sources */,
+				77596AB61A23354700053E3B /* AddressbookMailUnsubscribeDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,10 +373,10 @@
 			target = 36D638221A22287B00D36077 /* Submail */;
 			targetProxy = 36D638391A22287B00D36077 /* PBXContainerItemProxy */;
 		};
-		36D6385A1A22298700D36077 /* PBXTargetDependency */ = {
+		778A5E801A22CC08004015AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Alamofire;
-			targetProxy = 36D638591A22298700D36077 /* PBXContainerItemProxy */;
+			targetProxy = 778A5E7F1A22CC08004015AF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -498,6 +550,7 @@
 				36D638441A22287B00D36077 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36D638451A22287B00D36077 /* Build configuration list for PBXNativeTarget "SubmailTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +559,7 @@
 				36D638471A22287B00D36077 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
