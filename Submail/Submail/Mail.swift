@@ -35,13 +35,10 @@ public class Mail {
         }
         if let appid = self.params["appid"] as? String {
             requestParams["appid"] = appid
-            
             getTimestamp {
                 timestamp in
                 requestParams["timestamp"] = timestamp
-
                 requestParams["sign_type"] = "normal"
-                
                 let signTypeState = ["normal", "md5", "sha1"]
                 if let sign = self.params["sign_type"] as String? {
                     for state in signTypeState {
@@ -53,7 +50,6 @@ public class Mail {
                     }
                 }
                 requestParams["signature"] = self.createSignature(requestParams)
-                println(requestParams)
                 self.post(api, params: requestParams) {
                     JSON in
                     completion(JSON)
@@ -64,7 +60,7 @@ public class Mail {
     
     public func xsend(params: [String: AnyObject]?, completion: AnyObject? -> Void) {
         // API httpRequest URL
-        let api = "https://api.submail.cn/mail/xsend.json"
+        let api = "http://114.80.208.100:83/mail/xsend.json"
         var requestParams = [String: AnyObject]()
         if params != nil {
             requestParams = params!
@@ -96,7 +92,7 @@ public class Mail {
     
     public func subscribe(params: [String: AnyObject]?, completion: AnyObject? -> Void) {
         // API httpRequest URL
-        let api = "https://api.submail.cn/mail/subscribe.json"
+        let api = "http://114.80.208.100:83/mail/subscribe.json"
         var requestParams = [String: AnyObject]()
         if params != nil {
             requestParams = params!
@@ -128,7 +124,7 @@ public class Mail {
     
     public func unsubscribe(params: [String: AnyObject]?, completion: AnyObject? -> Void) {
         // API httpRequest URL
-        let api = "https://api.submail.cn/mail/unsubscribe.json"
+        let api = "http://114.80.208.100:83/mail/unsubscribe.json"
         var requestParams = [String: AnyObject]()
         if params != nil {
             requestParams = params!

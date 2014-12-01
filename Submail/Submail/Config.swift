@@ -23,7 +23,7 @@ let message_appid = "10022" //"your_message_app_id"
 
 let message_appkey = "14eae3a3c722f6c3def4204e4b505a21" //"your_message_app_key"
 
-let message_sign_type = "md5"
+let message_sign_type = "normal"
 
 // Addressbook Config
 

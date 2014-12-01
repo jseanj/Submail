@@ -194,7 +194,6 @@ class MailSend {
         let mail = Mail(config: self.config)
         mail.send(build_params()) {
             json in
-            println("jseanj: \(json)")
             if completion != nil {
                 completion!(json)
             }
