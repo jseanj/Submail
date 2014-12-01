@@ -166,8 +166,26 @@ class MailSend {
         }
         
         // vars and links and headers need json
+        if self.vars.count > 0 {
+            let jsonData = NSJSONSerialization.dataWithJSONObject(self.vars, options: nil, error: nil)
+            if let data = jsonData {
+                params["vars"] = NSString(data: data, encoding: NSUTF8StringEncoding)
+            }
+        }
+
+        if self.links.count > 0 {
+            let jsonData = NSJSONSerialization.dataWithJSONObject(self.links, options: nil, error: nil)
+            if let data = jsonData {
+                params["links"] = NSString(data: data, encoding: NSUTF8StringEncoding)
+            }
+        }
         
-        // attachment
+        if self.headers.count > 0 {
+            let jsonData = NSJSONSerialization.dataWithJSONObject(self.headers, options: nil, error: nil)
+            if let data = jsonData {
+                params["headers"] = NSString(data: data, encoding: NSUTF8StringEncoding)
+            }
+        }
         
         return params
     }
@@ -176,6 +194,7 @@ class MailSend {
         let mail = Mail(config: self.config)
         mail.send(build_params()) {
             json in
+            println("jseanj: \(json)")
             if completion != nil {
                 completion!(json)
             }

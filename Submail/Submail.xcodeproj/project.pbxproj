@@ -17,6 +17,7 @@
 		36D6384B1A22289B00D36077 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D6384A1A22289B00D36077 /* Message.swift */; };
 		36D6384D1A2228AA00D36077 /* MailSend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D6384C1A2228AA00D36077 /* MailSend.swift */; };
 		36D6384F1A22291200D36077 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D6384E1A22291200D36077 /* Config.swift */; };
+		774CE3E31A2C4B1A00EDD891 /* CommonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774CE3E21A2C4B1A00EDD891 /* CommonExtension.swift */; };
 		77596AAD1A232D1C00053E3B /* AddressbookMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77596AAC1A232D1C00053E3B /* AddressbookMail.swift */; };
 		77596AB01A232D3A00053E3B /* AddressbookMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77596AAF1A232D3A00053E3B /* AddressbookMessage.swift */; };
 		77596AB41A23351A00053E3B /* AddressbookMailSubscribeDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77596AB31A23351A00053E3B /* AddressbookMailSubscribeDemo.swift */; };
@@ -91,6 +92,7 @@
 		36D6384A1A22289B00D36077 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		36D6384C1A2228AA00D36077 /* MailSend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailSend.swift; sourceTree = "<group>"; };
 		36D6384E1A22291200D36077 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		774CE3E21A2C4B1A00EDD891 /* CommonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonExtension.swift; sourceTree = "<group>"; };
 		77596AAC1A232D1C00053E3B /* AddressbookMail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressbookMail.swift; sourceTree = "<group>"; };
 		77596AAF1A232D3A00053E3B /* AddressbookMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressbookMessage.swift; sourceTree = "<group>"; };
 		77596AB31A23351A00053E3B /* AddressbookMailSubscribeDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressbookMailSubscribeDemo.swift; path = ../AddressbookMailSubscribeDemo.swift; sourceTree = "<group>"; };
@@ -150,12 +152,13 @@
 				36D6382A1A22287B00D36077 /* ViewController.swift */,
 				77596AAC1A232D1C00053E3B /* AddressbookMail.swift */,
 				77596AAF1A232D3A00053E3B /* AddressbookMessage.swift */,
-				36D638481A22289000D36077 /* Mail.swift */,
 				36D6384A1A22289B00D36077 /* Message.swift */,
-				36D6384E1A22291200D36077 /* Config.swift */,
+				77596AC01A23375800053E3B /* MessageXSend.swift */,
+				36D638481A22289000D36077 /* Mail.swift */,
 				36D6384C1A2228AA00D36077 /* MailSend.swift */,
 				778A5E841A22CCD6004015AF /* MailXSend.swift */,
-				77596AC01A23375800053E3B /* MessageXSend.swift */,
+				36D6384E1A22291200D36077 /* Config.swift */,
+				774CE3E21A2C4B1A00EDD891 /* CommonExtension.swift */,
 				36D6382C1A22287B00D36077 /* Main.storyboard */,
 				36D6382F1A22287B00D36077 /* Images.xcassets */,
 				36D638311A22287B00D36077 /* LaunchScreen.xib */,
@@ -353,6 +356,7 @@
 				778A5E871A22CCE5004015AF /* MailXSendDemo.swift in Sources */,
 				36D6384F1A22291200D36077 /* Config.swift in Sources */,
 				778A5E851A22CCD6004015AF /* MailXSend.swift in Sources */,
+				774CE3E31A2C4B1A00EDD891 /* CommonExtension.swift in Sources */,
 				77596AB61A23354700053E3B /* AddressbookMailUnsubscribeDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

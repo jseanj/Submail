@@ -12,46 +12,53 @@ import Alamofire
 public class Mail {
     var params = [String: AnyObject]()
     var signType: String = "normal"
+    var appId: String = ""
+    var appKey: String = ""
     
     init(config: MailConfig) {
         self.params = config.params
+        if let appid = self.params["appid"] as? String {
+            self.appId = appid
+        }
+        if let appkey = self.params["appkey"] as? String {
+            self.appKey = appkey
+        }
     }
     
     // MARK: - API
     public func send(params: [String: AnyObject]?, completion: AnyObject? -> Void) {
         // API httpRequest URL
-        let api = "https://api.submail.cn/mail/send.json"
+        let api = "http://114.80.208.100:83/mail/send.json"
         var requestParams = [String: AnyObject]()
         if params != nil {
             requestParams = params!
         }
-        if let appid = self.params["appid"] as String? {
+        if let appid = self.params["appid"] as? String {
             requestParams["appid"] = appid
-            requestParams["sign_type"] = "normal"
-            
-            let signTypeState = ["normal", "md5", "sha1"]
-            if let sign = self.params["sign_type"] as String? {
-                for state in signTypeState {
-                    if state == sign {
-                        self.signType = sign
-                        requestParams["sign_type"] = sign
-                        break
-                    }
-                }
-            }
-            
-            requestParams["signature"] = createSignature()
-            
             
             getTimestamp {
                 timestamp in
                 requestParams["timestamp"] = timestamp
+
+                requestParams["sign_type"] = "normal"
+                
+                let signTypeState = ["normal", "md5", "sha1"]
+                if let sign = self.params["sign_type"] as String? {
+                    for state in signTypeState {
+                        if state == sign {
+                            self.signType = sign
+                            requestParams["sign_type"] = sign
+                            break
+                        }
+                    }
+                }
+                requestParams["signature"] = self.createSignature(requestParams)
+                println(requestParams)
                 self.post(api, params: requestParams) {
                     JSON in
                     completion(JSON)
                 }
             }
-            
         }
     }
     
@@ -64,33 +71,27 @@ public class Mail {
         }
         if let appid = self.params["appid"] as String? {
             requestParams["appid"] = appid
-            requestParams["sign_type"] = "normal"
-            
-            let signTypeState = ["normal", "md5", "sha1"]
-            if let sign = self.params["sign_type"] as String? {
-                for state in signTypeState {
-                    if state == sign {
-                        self.signType = sign
-                        requestParams["sign_type"] = sign
-                        break
-                    }
-                }
-            }
-            
-            requestParams["signature"] = createSignature()
-            
-            
             getTimestamp {
                 timestamp in
                 requestParams["timestamp"] = timestamp
+                requestParams["sign_type"] = "normal"
+                let signTypeState = ["normal", "md5", "sha1"]
+                if let sign = self.params["sign_type"] as String? {
+                    for state in signTypeState {
+                        if state == sign {
+                            self.signType = sign
+                            requestParams["sign_type"] = sign
+                            break
+                        }
+                    }
+                }
+                requestParams["signature"] = self.createSignature(requestParams)
                 self.post(api, params: requestParams) {
                     JSON in
                     completion(JSON)
                 }
             }
-            
         }
-        
     }
     
     public func subscribe(params: [String: AnyObject]?, completion: AnyObject? -> Void) {
@@ -102,30 +103,26 @@ public class Mail {
         }
         if let appid = self.params["appid"] as String? {
             requestParams["appid"] = appid
-            requestParams["sign_type"] = "normal"
-            
-            let signTypeState = ["normal", "md5", "sha1"]
-            if let sign = self.params["sign_type"] as String? {
-                for state in signTypeState {
-                    if state == sign {
-                        self.signType = sign
-                        requestParams["sign_type"] = sign
-                        break
-                    }
-                }
-            }
-            
-            requestParams["signature"] = createSignature()
-            
             getTimestamp {
                 timestamp in
                 requestParams["timestamp"] = timestamp
+                requestParams["sign_type"] = "normal"
+                let signTypeState = ["normal", "md5", "sha1"]
+                if let sign = self.params["sign_type"] as String? {
+                    for state in signTypeState {
+                        if state == sign {
+                            self.signType = sign
+                            requestParams["sign_type"] = sign
+                            break
+                        }
+                    }
+                }
+                requestParams["signature"] = self.createSignature(requestParams)
                 self.post(api, params: requestParams) {
                     JSON in
                     completion(JSON)
                 }
             }
-            
         }
     }
     
@@ -138,33 +135,27 @@ public class Mail {
         }
         if let appid = self.params["appid"] as String? {
             requestParams["appid"] = appid
-            requestParams["sign_type"] = "normal"
-            
-            let signTypeState = ["normal", "md5", "sha1"]
-            if let sign = self.params["sign_type"] as String? {
-                for state in signTypeState {
-                    if state == sign {
-                        self.signType = sign
-                        requestParams["sign_type"] = sign
-                        break
-                    }
-                }
-            }
-            
-            requestParams["signature"] = createSignature()
-            
-            
             getTimestamp {
                 timestamp in
                 requestParams["timestamp"] = timestamp
+                requestParams["sign_type"] = "normal"
+                let signTypeState = ["normal", "md5", "sha1"]
+                if let sign = self.params["sign_type"] as String? {
+                    for state in signTypeState {
+                        if state == sign {
+                            self.signType = sign
+                            requestParams["sign_type"] = sign
+                            break
+                        }
+                    }
+                }
+                requestParams["signature"] = self.createSignature(requestParams)
                 self.post(api, params: requestParams) {
                     JSON in
                     completion(JSON)
                 }
             }
-            
         }
-        
     }
     
     // MARK: - private helper method
@@ -183,18 +174,18 @@ public class Mail {
     }
     
     private func getTimestamp(completion: String -> Void) {
-        let api = "https://api.submail.cn/service/timestamp.json"
+        let api = "http://114.80.208.100:83/service/timestamp.json"
         get(api, params: nil) {
             JSON in
             if let json = JSON as [String: AnyObject]? {
-                if let timestamp = json["timestamp"] as String? {
-                    completion(timestamp)
+                if let timestamp = json["timestamp"] as NSNumber? {
+                    completion(timestamp.stringValue)
                 }
             }
         }
     }
     
-    private func createSignature() -> String {
+    private func createSignature(params: [String: AnyObject]) -> String {
         if self.signType == "normal" {
             if let signature = self.params["appkey"] as String? {
                 return signature
@@ -202,11 +193,37 @@ public class Mail {
                 return ""
             }
         } else {
-            return buildSignature()
+            return buildSignature(params)
         }
     }
     
-    private func buildSignature() -> String {
-        return "aa"
+    private func buildSignature(params: [String: AnyObject]) -> String {
+        let sortedArray = sorted(params.keys.array)
+        var signStr = ""
+        for key in sortedArray {
+            if key != "attachments" {
+                if let value = params[key] as? String {
+                    signStr += key + "=" + value + "&"
+                }
+            }
+        }
+        signStr = signStr.substringToIndex(advance(signStr.startIndex, signStr.utf16Count-1))
+        
+        signStr = self.appId + self.appKey + signStr + self.appId + self.appKey
+        
+        if self.signType == "md5" {
+            if let md5 = signStr.md5() {
+                return md5
+            } else {
+                return ""
+            }
+        } else if self.signType == "sha1" {
+            if let sha1 = signStr.sha1() {
+                return sha1
+            } else {
+                return ""
+            }
+        }
+        return ""
     }
 }

@@ -61,6 +61,12 @@ class MessageXSend {
         params["project"] = self.project
         
         // vars and links and headers need json
+        if self.vars.count > 0 {
+            let jsonData = NSJSONSerialization.dataWithJSONObject(self.vars, options: nil, error: nil)
+            if let data = jsonData {
+                params["vars"] = NSString(data: data, encoding: NSUTF8StringEncoding)
+            }
+        }
         
         return params
     }
