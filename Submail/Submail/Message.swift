@@ -92,7 +92,7 @@ public class Message {
     
     public func subscribe(params: [String: AnyObject]?, completion: AnyObject? -> Void) {
         // API httpRequest URL
-        let api = "http://114.80.208.100:83/message/subscribe.json"
+        let api = "http://114.80.208.100:83/addressbook/message/subscribe.json"
         var requestParams = [String: AnyObject]()
         if params != nil {
             requestParams = params!
@@ -124,7 +124,7 @@ public class Message {
     
     public func unsubscribe(params: [String: AnyObject]?, completion: AnyObject? -> Void) {
         // API httpRequest URL
-        let api = "http://114.80.208.100:83/message/unsubscribe.json"
+        let api = "http://114.80.208.100:83/addressbook/message/unsubscribe.json"
         var requestParams = [String: AnyObject]()
         if params != nil {
             requestParams = params!
@@ -158,6 +158,7 @@ public class Message {
     private func post(api: String, params: [String: AnyObject]?, completion: AnyObject? -> Void) {
         Alamofire.request(.POST, api, parameters: params).responseJSON {
             (_, _, JSON, _) in
+            println(JSON)
             completion(JSON)
         }
     }
@@ -206,6 +207,8 @@ public class Message {
         signStr = signStr.substringToIndex(advance(signStr.startIndex, signStr.utf16Count-1))
         
         signStr = self.appId + self.appKey + signStr + self.appId + self.appKey
+        
+        println("===\(signStr)")
         
         if self.signType == "md5" {
             if let md5 = signStr.md5() {

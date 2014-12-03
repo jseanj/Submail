@@ -9,16 +9,18 @@
 import Foundation
 
 public class MailXSendDemo {
-    public func demo() {
+    public class func demo() {
         var submail = MailXSend(config: MailConfig())
         submail.add_to("leo@submail.cn", "leo")
-        submail.set_project("uigGk1")
-        submail.add_var("name", "leo")
-        submail.add_var("age", "32")
-        submail.add_link("developer", "http://submail.cn/chs/developer")
-        submail.add_link("store", "http://submail.cn/chs/store")
-        submail.add_header("X-Accept", "zh-cn")
-        submail.add_header("X-Mailer", "leo App")
+//        submail.set_from("no-reply@submail.cn")
+        submail.set_project("wAWzY4")
+        
+//        submail.add_var("name", "leo")
+//        submail.add_var("age", "32")
+//        submail.add_link("developer", "http://submail.cn/chs/developer")
+//        submail.add_link("store", "http://submail.cn/chs/store")
+//        submail.add_header("X-Accept", "zh-cn")
+//        submail.add_header("X-Mailer", "leo App")
         
         submail.xsend()
     }

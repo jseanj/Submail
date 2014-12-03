@@ -10,7 +10,7 @@ import Foundation
 
 class MailXSend {
     var to = [(String, String?)]()
-    var from: String = ""
+    var from: String?
     var fromName: String?
     var addressbook = [String]()
     var cc = [(String, String?)]()
@@ -103,7 +103,9 @@ class MailXSend {
             params["addressbook"] = addressbookValue.substringToIndex(advance(addressbookValue.startIndex, addressbookValue.utf16Count-1))
         }
         
-        params["from"] = self.from.0
+        if self.from != nil {
+            params["from"] = self.from!
+        }
         
         if self.fromName != nil {
             params["from_name"] = self.fromName!
@@ -143,8 +145,6 @@ class MailXSend {
         
         if self.subject != nil {
             params["subject"] = self.subject!
-        } else {
-            params["subject"] = self.project
         }
         
         // vars and links and headers need json
@@ -174,7 +174,7 @@ class MailXSend {
     
     func xsend(completion: (AnyObject? -> Void)? = nil) {
         let mail = Mail(config: self.config)
-        mail.send(build_params()) {
+        mail.xsend(build_params()) {
             json in
             if completion != nil {
                 completion!(json)

@@ -13,7 +13,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        println("mail send")
         MailSendDemo.demo()
+//        println("mail xsend")
+//        MailXSendDemo.demo()
+//        println("message xsend")
+//        MessageXSendDemo.demo()
+//        println("address mail subscribe")
+//        AddressbookMailSubscribeDemo.demo()
+//        println("address mail unsubscribe")
+//        AddressbookMailUnsubscribeDemo.demo()
+//        println("address message subscribe")
+//        AddressbookMessageSubscribeDemo.demo()
+//        println("address message unsubscribe")
+//        AddressbookMessageUnsubscribeDemo.demo()
     }
 
     override func didReceiveMemoryWarning() {

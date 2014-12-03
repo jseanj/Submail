@@ -9,7 +9,7 @@
 import Foundation
 
 public class MessageXSendDemo {
-    public func demo() {
+    public class func demo() {
         var submail = MessageXSend(config: MessageConfig())
         submail.add_to("18616761881")
         submail.set_project("kZ9Ky3")

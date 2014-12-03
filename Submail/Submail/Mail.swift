@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 jin.shang. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Alamofire
 
 public class Mail {
@@ -50,6 +50,7 @@ public class Mail {
                     }
                 }
                 requestParams["signature"] = self.createSignature(requestParams)
+                //println(requestParams)
                 self.post(api, params: requestParams) {
                     JSON in
                     completion(JSON)
@@ -92,7 +93,7 @@ public class Mail {
     
     public func subscribe(params: [String: AnyObject]?, completion: AnyObject? -> Void) {
         // API httpRequest URL
-        let api = "http://114.80.208.100:83/mail/subscribe.json"
+        let api = "http://114.80.208.100:83/addressbook/mail/subscribe.json"
         var requestParams = [String: AnyObject]()
         if params != nil {
             requestParams = params!
@@ -114,6 +115,7 @@ public class Mail {
                     }
                 }
                 requestParams["signature"] = self.createSignature(requestParams)
+                println(requestParams)
                 self.post(api, params: requestParams) {
                     JSON in
                     completion(JSON)
@@ -124,7 +126,7 @@ public class Mail {
     
     public func unsubscribe(params: [String: AnyObject]?, completion: AnyObject? -> Void) {
         // API httpRequest URL
-        let api = "http://114.80.208.100:83/mail/unsubscribe.json"
+        let api = "http://114.80.208.100:83/addressbook/mail/unsubscribe.json"
         var requestParams = [String: AnyObject]()
         if params != nil {
             requestParams = params!
@@ -156,10 +158,40 @@ public class Mail {
     
     // MARK: - private helper method
     private func post(api: String, params: [String: AnyObject]?, completion: AnyObject? -> Void) {
+        /*let fileURL = NSBundle.mainBundle()
+            .URLForResource("test", withExtension: "png")
+        Alamofire.upload(.POST, "http://114.80.208.100:83/mail/send.json", fileURL!).responseJSON {
+            (_, _, JSON, _) in
+            println("upload")
+            println(JSON)
+        }*/
+        
+        var imaget = UIImage(named: "test.png")
+        let imageData = UIImagePNGRepresentation(imaget)
+        
+        let dict = params as Dictionary<String, String>
+        let urlRequest = urlRequestWithComponents("http://114.80.208.100:83/mail/send.json", parameters: dict, imageData: imageData)
+        
+        Alamofire.upload(urlRequest.0, urlRequest.1)
+            .progress { (bytesWritten, totalBytesWritten, totalBytesExpectedToWrite) in
+                println("\(totalBytesWritten) / \(totalBytesExpectedToWrite)")
+            }
+            .responseJSON { (request, response, JSON, error) in
+                println("REQUEST \(request)")
+                println("RESPONSE \(response)")
+                println("JSON \(JSON)")
+                println("ERROR \(error)")
+        }
+        
+        
         Alamofire.request(.POST, api, parameters: params).responseJSON {
             (_, _, JSON, _) in
+            println(JSON)
             completion(JSON)
         }
+        
+        
+        
     }
     
     private func get(api: String, params: [String: AnyObject]?, completion: AnyObject? -> Void) {
@@ -206,8 +238,11 @@ public class Mail {
         signStr = signStr.substringToIndex(advance(signStr.startIndex, signStr.utf16Count-1))
         
         signStr = self.appId + self.appKey + signStr + self.appId + self.appKey
+
+        println("===\(signStr)")
         
         if self.signType == "md5" {
+
             if let md5 = signStr.md5() {
                 return md5
             } else {
@@ -221,5 +256,39 @@ public class Mail {
             }
         }
         return ""
+    }
+    
+    func urlRequestWithComponents(urlString:String, parameters:Dictionary<String, String>, imageData:NSData) -> (URLRequestConvertible, NSData) {
+        
+        // create url request to send
+        var mutableURLRequest = NSMutableURLRequest(URL: NSURL(string: urlString)!)
+        mutableURLRequest.HTTPMethod = Alamofire.Method.POST.rawValue
+        let boundaryConstant = "myRandomBoundary12345";
+        let contentType = "multipart/form-data;boundary="+boundaryConstant
+        mutableURLRequest.setValue(contentType, forHTTPHeaderField: "Content-Type")
+        
+        // create upload data to send
+        let uploadData = NSMutableData()
+        
+        // add image
+        uploadData.appendData("\r\n--\(boundaryConstant)\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+        uploadData.appendData("Content-Disposition: form-data; name=\"file\"; filename=\"file.png\"\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+        uploadData.appendData("Content-Type: image/png\r\n\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+        uploadData.appendData(imageData)
+        
+        // add parameters
+        for (key, value) in parameters {
+            uploadData.appendData("\r\n--\(boundaryConstant)\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+            uploadData.appendData("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n\(value)".dataUsingEncoding(NSUTF8StringEncoding)!)
+        }
+        uploadData.appendData("\r\n--\(boundaryConstant)--\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+        
+        println("____________")
+        println(uploadData)
+        println("____________")
+
+        
+        // return URLRequestConvertible and NSData
+        return (Alamofire.ParameterEncoding.URL.encode(mutableURLRequest, parameters: nil).0, uploadData)
     }
 }

@@ -23,7 +23,7 @@ public class MailSendDemo {
         
         // set email sender address and name
         submail.set_from("no-reply@submail.cn")
-        submail.set_fromname("SUBMAIL")
+        //submail.set_fromname("SUBMAIL")
         
         // set email reply address
         submail.set_reply("service@submail.cn")
@@ -36,7 +36,7 @@ public class MailSendDemo {
         submail.set_html("test SDK html")
         
         // set email subject
-        submail.set_subject("test SDK")
+        submail.set_subject("testSDK")
         
         // email text content filter
         submail.add_var("name", "leo")
@@ -51,8 +51,11 @@ public class MailSendDemo {
         submail.add_header("X-Mailer", "leo App")
         
         // email attachment
-        submail.add_attachment("/root/test")
-        submail.add_attachment("/roor/test1")
+        //submail.add_attachment("/root/test")
+        let file = NSBundle.mainBundle().pathForResource("test", ofType: "png")
+        if file != nil {
+            submail.add_attachment(file!)
+        }
         
         submail.send()
     }

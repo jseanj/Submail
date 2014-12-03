@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension String {
+/*extension String {
     /** Calculate MD5 hash */
     public func md5() -> String? {
         return self.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)?.md5()?.toHexString()
@@ -17,7 +17,7 @@ extension String {
     public func sha1() -> String? {
         return self.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)?.sha1()?.toHexString()
     }
-}
+}*/
 
 extension NSData {
     

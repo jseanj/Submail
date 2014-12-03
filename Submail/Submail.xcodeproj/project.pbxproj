@@ -18,6 +18,7 @@
 		36D6384D1A2228AA00D36077 /* MailSend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D6384C1A2228AA00D36077 /* MailSend.swift */; };
 		36D6384F1A22291200D36077 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D6384E1A22291200D36077 /* Config.swift */; };
 		774CE3E31A2C4B1A00EDD891 /* CommonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774CE3E21A2C4B1A00EDD891 /* CommonExtension.swift */; };
+		774CE3EB1A2ED85100EDD891 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 774CE3E91A2ED85100EDD891 /* NSString+Helper.m */; };
 		77596AAD1A232D1C00053E3B /* AddressbookMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77596AAC1A232D1C00053E3B /* AddressbookMail.swift */; };
 		77596AB01A232D3A00053E3B /* AddressbookMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77596AAF1A232D3A00053E3B /* AddressbookMessage.swift */; };
 		77596AB41A23351A00053E3B /* AddressbookMailSubscribeDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77596AB31A23351A00053E3B /* AddressbookMailSubscribeDemo.swift */; };
@@ -30,6 +31,7 @@
 		778A5E831A22CC94004015AF /* MailSendDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778A5E821A22CC94004015AF /* MailSendDemo.swift */; };
 		778A5E851A22CCD6004015AF /* MailXSend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778A5E841A22CCD6004015AF /* MailXSend.swift */; };
 		778A5E871A22CCE5004015AF /* MailXSendDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778A5E861A22CCE5004015AF /* MailXSendDemo.swift */; };
+		77919B9B1A2F2F970088BD56 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 77919B9A1A2F2F970088BD56 /* test.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,9 @@
 		36D6384C1A2228AA00D36077 /* MailSend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailSend.swift; sourceTree = "<group>"; };
 		36D6384E1A22291200D36077 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		774CE3E21A2C4B1A00EDD891 /* CommonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonExtension.swift; sourceTree = "<group>"; };
+		774CE3E81A2ED84F00EDD891 /* Submail-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Submail-Bridging-Header.h"; sourceTree = "<group>"; };
+		774CE3E91A2ED85100EDD891 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
+		774CE3EA1A2ED85100EDD891 /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
 		77596AAC1A232D1C00053E3B /* AddressbookMail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressbookMail.swift; sourceTree = "<group>"; };
 		77596AAF1A232D3A00053E3B /* AddressbookMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressbookMessage.swift; sourceTree = "<group>"; };
 		77596AB31A23351A00053E3B /* AddressbookMailSubscribeDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressbookMailSubscribeDemo.swift; path = ../AddressbookMailSubscribeDemo.swift; sourceTree = "<group>"; };
@@ -105,6 +110,7 @@
 		778A5E821A22CC94004015AF /* MailSendDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MailSendDemo.swift; path = ../MailSendDemo.swift; sourceTree = "<group>"; };
 		778A5E841A22CCD6004015AF /* MailXSend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailXSend.swift; sourceTree = "<group>"; };
 		778A5E861A22CCE5004015AF /* MailXSendDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MailXSendDemo.swift; path = ../MailXSendDemo.swift; sourceTree = "<group>"; };
+		77919B9A1A2F2F970088BD56 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,10 +165,13 @@
 				778A5E841A22CCD6004015AF /* MailXSend.swift */,
 				36D6384E1A22291200D36077 /* Config.swift */,
 				774CE3E21A2C4B1A00EDD891 /* CommonExtension.swift */,
+				774CE3E91A2ED85100EDD891 /* NSString+Helper.m */,
+				774CE3EA1A2ED85100EDD891 /* NSString+Helper.h */,
 				36D6382C1A22287B00D36077 /* Main.storyboard */,
 				36D6382F1A22287B00D36077 /* Images.xcassets */,
 				36D638311A22287B00D36077 /* LaunchScreen.xib */,
 				36D638261A22287B00D36077 /* Supporting Files */,
+				774CE3E81A2ED84F00EDD891 /* Submail-Bridging-Header.h */,
 			);
 			path = Submail;
 			sourceTree = "<group>";
@@ -202,6 +211,7 @@
 				778A5E821A22CC94004015AF /* MailSendDemo.swift */,
 				778A5E861A22CCE5004015AF /* MailXSendDemo.swift */,
 				77596ABE1A23374100053E3B /* MessageXSendDemo.swift */,
+				77919B9A1A2F2F970088BD56 /* test.png */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -323,6 +333,7 @@
 				36D6382E1A22287B00D36077 /* Main.storyboard in Resources */,
 				36D638331A22287B00D36077 /* LaunchScreen.xib in Resources */,
 				36D638301A22287B00D36077 /* Images.xcassets in Resources */,
+				77919B9B1A2F2F970088BD56 /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +368,7 @@
 				36D6384F1A22291200D36077 /* Config.swift in Sources */,
 				778A5E851A22CCD6004015AF /* MailXSend.swift in Sources */,
 				774CE3E31A2C4B1A00EDD891 /* CommonExtension.swift in Sources */,
+				774CE3EB1A2ED85100EDD891 /* NSString+Helper.m in Sources */,
 				77596AB61A23354700053E3B /* AddressbookMailUnsubscribeDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,9 +497,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Submail/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Submail/Submail-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -495,9 +510,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Submail/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Submail/Submail-Bridging-Header.h";
 			};
 			name = Release;
 		};

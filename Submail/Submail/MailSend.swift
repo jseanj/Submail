@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class MailSend {
     // appid
@@ -119,7 +120,7 @@ class MailSend {
             params["addressbook"] = addressbookValue.substringToIndex(advance(addressbookValue.startIndex, addressbookValue.utf16Count-1))
         }
         
-        params["from"] = self.from.0
+        params["from"] = self.from
         
         if self.fromName != nil {
             params["from_name"] = self.fromName!
@@ -192,8 +193,10 @@ class MailSend {
     
     func send(completion: (AnyObject? -> Void)? = nil) {
         let mail = Mail(config: self.config)
+
         mail.send(build_params()) {
             json in
+            //println(json)
             if completion != nil {
                 completion!(json)
             }
