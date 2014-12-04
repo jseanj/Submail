@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Alamofire
 
 public class Message {
     var params = [String: AnyObject]()
@@ -156,17 +155,23 @@ public class Message {
     
     // MARK: - private helper method
     private func post(api: String, params: [String: AnyObject]?, completion: AnyObject? -> Void) {
-        Alamofire.request(.POST, api, parameters: params).responseJSON {
-            (_, _, JSON, _) in
-            println(JSON)
+        let manager = AFHTTPRequestOperationManager()
+        
+        manager.POST(api, parameters: params, success: {
+            _, JSON in
             completion(JSON)
+        }) {
+            _, _ in
         }
     }
     
     private func get(api: String, params: [String: AnyObject]?, completion: AnyObject? -> Void) {
-        Alamofire.request(.GET, api, parameters: params).responseJSON {
-            (_, _, JSON, _) in
+        let manager = AFHTTPRequestOperationManager()
+        manager.GET(api, parameters: params, success: {
+            _, JSON in
             completion(JSON)
+        }) {
+                _, _ in
         }
     }
     
@@ -208,7 +213,7 @@ public class Message {
         
         signStr = self.appId + self.appKey + signStr + self.appId + self.appKey
         
-        println("===\(signStr)")
+//        println("===\(signStr)")
         
         if self.signType == "md5" {
             if let md5 = signStr.md5() {

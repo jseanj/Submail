@@ -6,8 +6,7 @@
 //  Copyright (c) 2014年 jin.shang. All rights reserved.
 //
 
-import Foundation
-import Alamofire
+import UIKit
 
 class MailSend {
     // appid
@@ -188,6 +187,10 @@ class MailSend {
             }
         }
         
+        if self.attachments.count > 0 {
+            params["attachments"] = self.attachments
+        }
+        
         return params
     }
     
@@ -196,7 +199,6 @@ class MailSend {
 
         mail.send(build_params()) {
             json in
-            //println(json)
             if completion != nil {
                 completion!(json)
             }

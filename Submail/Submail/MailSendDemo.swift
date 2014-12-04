@@ -52,9 +52,14 @@ public class MailSendDemo {
         
         // email attachment
         //submail.add_attachment("/root/test")
+        //submail.add_attachment("test.png")
         let file = NSBundle.mainBundle().pathForResource("test", ofType: "png")
         if file != nil {
             submail.add_attachment(file!)
+        }
+        let file2 = NSBundle.mainBundle().pathForResource("test2", ofType: "png")
+        if file2 != nil {
+            submail.add_attachment(file2!)
         }
         
         submail.send()

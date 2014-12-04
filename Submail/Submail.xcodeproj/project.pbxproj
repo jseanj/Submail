@@ -27,11 +27,20 @@
 		77596ABA1A23358200053E3B /* AddressbookMessageUnsubscribeDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77596AB91A23358200053E3B /* AddressbookMessageUnsubscribeDemo.swift */; };
 		77596ABF1A23374100053E3B /* MessageXSendDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77596ABE1A23374100053E3B /* MessageXSendDemo.swift */; };
 		77596AC11A23375800053E3B /* MessageXSend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77596AC01A23375800053E3B /* MessageXSend.swift */; };
-		778A5E811A22CC10004015AF /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 778A5E7C1A22CBFF004015AF /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		778A5E831A22CC94004015AF /* MailSendDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778A5E821A22CC94004015AF /* MailSendDemo.swift */; };
 		778A5E851A22CCD6004015AF /* MailXSend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778A5E841A22CCD6004015AF /* MailXSend.swift */; };
 		778A5E871A22CCE5004015AF /* MailXSendDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778A5E861A22CCE5004015AF /* MailXSendDemo.swift */; };
 		77919B9B1A2F2F970088BD56 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 77919B9A1A2F2F970088BD56 /* test.png */; };
+		77919BB21A30297C0088BD56 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 77919BA01A30297C0088BD56 /* AFHTTPRequestOperation.m */; };
+		77919BB31A30297C0088BD56 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 77919BA21A30297C0088BD56 /* AFHTTPRequestOperationManager.m */; };
+		77919BB41A30297C0088BD56 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 77919BA41A30297C0088BD56 /* AFHTTPSessionManager.m */; };
+		77919BB51A30297C0088BD56 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 77919BA71A30297C0088BD56 /* AFNetworkReachabilityManager.m */; };
+		77919BB61A30297C0088BD56 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 77919BA91A30297C0088BD56 /* AFSecurityPolicy.m */; };
+		77919BB71A30297C0088BD56 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 77919BAB1A30297C0088BD56 /* AFURLConnectionOperation.m */; };
+		77919BB81A30297C0088BD56 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 77919BAD1A30297C0088BD56 /* AFURLRequestSerialization.m */; };
+		77919BB91A30297C0088BD56 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 77919BAF1A30297C0088BD56 /* AFURLResponseSerialization.m */; };
+		77919BBA1A30297C0088BD56 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 77919BB11A30297C0088BD56 /* AFURLSessionManager.m */; };
+		77919BBC1A304E5F0088BD56 /* test2.png in Resources */ = {isa = PBXBuildFile; fileRef = 77919BBB1A304E5F0088BD56 /* test2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,27 +51,6 @@
 			remoteGlobalIDString = 36D638221A22287B00D36077;
 			remoteInfo = Submail;
 		};
-		778A5E7B1A22CBFF004015AF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 778A5E761A22CBFF004015AF /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
-			remoteInfo = Alamofire;
-		};
-		778A5E7D1A22CBFF004015AF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 778A5E761A22CBFF004015AF /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
-			remoteInfo = AlamofireTests;
-		};
-		778A5E7F1A22CC08004015AF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 778A5E761A22CBFF004015AF /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = Alamofire;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -72,7 +60,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				778A5E811A22CC10004015AF /* Alamofire.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,11 +93,30 @@
 		77596AB91A23358200053E3B /* AddressbookMessageUnsubscribeDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressbookMessageUnsubscribeDemo.swift; path = ../AddressbookMessageUnsubscribeDemo.swift; sourceTree = "<group>"; };
 		77596ABE1A23374100053E3B /* MessageXSendDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageXSendDemo.swift; sourceTree = "<group>"; };
 		77596AC01A23375800053E3B /* MessageXSend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageXSend.swift; sourceTree = "<group>"; };
-		778A5E761A22CBFF004015AF /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		778A5E821A22CC94004015AF /* MailSendDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MailSendDemo.swift; path = ../MailSendDemo.swift; sourceTree = "<group>"; };
 		778A5E841A22CCD6004015AF /* MailXSend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailXSend.swift; sourceTree = "<group>"; };
 		778A5E861A22CCE5004015AF /* MailXSendDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MailXSendDemo.swift; path = ../MailXSendDemo.swift; sourceTree = "<group>"; };
 		77919B9A1A2F2F970088BD56 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		77919B9F1A30297C0088BD56 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		77919BA01A30297C0088BD56 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		77919BA11A30297C0088BD56 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		77919BA21A30297C0088BD56 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		77919BA31A30297C0088BD56 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		77919BA41A30297C0088BD56 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		77919BA51A30297C0088BD56 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		77919BA61A30297C0088BD56 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		77919BA71A30297C0088BD56 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		77919BA81A30297C0088BD56 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		77919BA91A30297C0088BD56 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		77919BAA1A30297C0088BD56 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		77919BAB1A30297C0088BD56 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		77919BAC1A30297C0088BD56 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		77919BAD1A30297C0088BD56 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		77919BAE1A30297C0088BD56 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		77919BAF1A30297C0088BD56 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		77919BB01A30297C0088BD56 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		77919BB11A30297C0088BD56 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		77919BBB1A304E5F0088BD56 /* test2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +140,6 @@
 		36D6381A1A22287B00D36077 = {
 			isa = PBXGroup;
 			children = (
-				778A5E761A22CBFF004015AF /* Alamofire.xcodeproj */,
 				36D638251A22287B00D36077 /* Submail */,
 				36D6383B1A22287B00D36077 /* SubmailTests */,
 				36D638241A22287B00D36077 /* Products */,
@@ -153,6 +158,7 @@
 		36D638251A22287B00D36077 /* Submail */ = {
 			isa = PBXGroup;
 			children = (
+				77919B9E1A30297C0088BD56 /* AFNetworking */,
 				77596ABB1A2336C200053E3B /* Demo */,
 				36D638281A22287B00D36077 /* AppDelegate.swift */,
 				36D6382A1A22287B00D36077 /* ViewController.swift */,
@@ -211,18 +217,36 @@
 				778A5E821A22CC94004015AF /* MailSendDemo.swift */,
 				778A5E861A22CCE5004015AF /* MailXSendDemo.swift */,
 				77596ABE1A23374100053E3B /* MessageXSendDemo.swift */,
+				77919BBB1A304E5F0088BD56 /* test2.png */,
 				77919B9A1A2F2F970088BD56 /* test.png */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
 		};
-		778A5E771A22CBFF004015AF /* Products */ = {
+		77919B9E1A30297C0088BD56 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				778A5E7C1A22CBFF004015AF /* Alamofire.framework */,
-				778A5E7E1A22CBFF004015AF /* AlamofireTests.xctest */,
+				77919B9F1A30297C0088BD56 /* AFHTTPRequestOperation.h */,
+				77919BA01A30297C0088BD56 /* AFHTTPRequestOperation.m */,
+				77919BA11A30297C0088BD56 /* AFHTTPRequestOperationManager.h */,
+				77919BA21A30297C0088BD56 /* AFHTTPRequestOperationManager.m */,
+				77919BA31A30297C0088BD56 /* AFHTTPSessionManager.h */,
+				77919BA41A30297C0088BD56 /* AFHTTPSessionManager.m */,
+				77919BA51A30297C0088BD56 /* AFNetworking.h */,
+				77919BA61A30297C0088BD56 /* AFNetworkReachabilityManager.h */,
+				77919BA71A30297C0088BD56 /* AFNetworkReachabilityManager.m */,
+				77919BA81A30297C0088BD56 /* AFSecurityPolicy.h */,
+				77919BA91A30297C0088BD56 /* AFSecurityPolicy.m */,
+				77919BAA1A30297C0088BD56 /* AFURLConnectionOperation.h */,
+				77919BAB1A30297C0088BD56 /* AFURLConnectionOperation.m */,
+				77919BAC1A30297C0088BD56 /* AFURLRequestSerialization.h */,
+				77919BAD1A30297C0088BD56 /* AFURLRequestSerialization.m */,
+				77919BAE1A30297C0088BD56 /* AFURLResponseSerialization.h */,
+				77919BAF1A30297C0088BD56 /* AFURLResponseSerialization.m */,
+				77919BB01A30297C0088BD56 /* AFURLSessionManager.h */,
+				77919BB11A30297C0088BD56 /* AFURLSessionManager.m */,
 			);
-			name = Products;
+			path = AFNetworking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +264,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				778A5E801A22CC08004015AF /* PBXTargetDependency */,
 			);
 			name = Submail;
 			productName = Submail;
@@ -294,12 +317,6 @@
 			mainGroup = 36D6381A1A22287B00D36077;
 			productRefGroup = 36D638241A22287B00D36077 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 778A5E771A22CBFF004015AF /* Products */;
-					ProjectRef = 778A5E761A22CBFF004015AF /* Alamofire.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				36D638221A22287B00D36077 /* Submail */,
@@ -307,23 +324,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		778A5E7C1A22CBFF004015AF /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 778A5E7B1A22CBFF004015AF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		778A5E7E1A22CBFF004015AF /* AlamofireTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = AlamofireTests.xctest;
-			remoteRef = 778A5E7D1A22CBFF004015AF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		36D638211A22287B00D36077 /* Resources */ = {
@@ -333,6 +333,7 @@
 				36D6382E1A22287B00D36077 /* Main.storyboard in Resources */,
 				36D638331A22287B00D36077 /* LaunchScreen.xib in Resources */,
 				36D638301A22287B00D36077 /* Images.xcassets in Resources */,
+				77919BBC1A304E5F0088BD56 /* test2.png in Resources */,
 				77919B9B1A2F2F970088BD56 /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,15 +356,24 @@
 				77596AB81A23356000053E3B /* AddressbookMessageSubscribeDemo.swift in Sources */,
 				36D6384D1A2228AA00D36077 /* MailSend.swift in Sources */,
 				77596ABA1A23358200053E3B /* AddressbookMessageUnsubscribeDemo.swift in Sources */,
+				77919BB71A30297C0088BD56 /* AFURLConnectionOperation.m in Sources */,
+				77919BB61A30297C0088BD56 /* AFSecurityPolicy.m in Sources */,
 				77596AB01A232D3A00053E3B /* AddressbookMessage.swift in Sources */,
+				77919BB41A30297C0088BD56 /* AFHTTPSessionManager.m in Sources */,
 				36D638491A22289000D36077 /* Mail.swift in Sources */,
 				36D6384B1A22289B00D36077 /* Message.swift in Sources */,
 				77596AC11A23375800053E3B /* MessageXSend.swift in Sources */,
 				77596AB41A23351A00053E3B /* AddressbookMailSubscribeDemo.swift in Sources */,
 				778A5E831A22CC94004015AF /* MailSendDemo.swift in Sources */,
 				36D6382B1A22287B00D36077 /* ViewController.swift in Sources */,
+				77919BB31A30297C0088BD56 /* AFHTTPRequestOperationManager.m in Sources */,
 				36D638291A22287B00D36077 /* AppDelegate.swift in Sources */,
+				77919BB21A30297C0088BD56 /* AFHTTPRequestOperation.m in Sources */,
+				77919BBA1A30297C0088BD56 /* AFURLSessionManager.m in Sources */,
 				77596AAD1A232D1C00053E3B /* AddressbookMail.swift in Sources */,
+				77919BB51A30297C0088BD56 /* AFNetworkReachabilityManager.m in Sources */,
+				77919BB91A30297C0088BD56 /* AFURLResponseSerialization.m in Sources */,
+				77919BB81A30297C0088BD56 /* AFURLRequestSerialization.m in Sources */,
 				778A5E871A22CCE5004015AF /* MailXSendDemo.swift in Sources */,
 				36D6384F1A22291200D36077 /* Config.swift in Sources */,
 				778A5E851A22CCD6004015AF /* MailXSend.swift in Sources */,
@@ -388,11 +398,6 @@
 			isa = PBXTargetDependency;
 			target = 36D638221A22287B00D36077 /* Submail */;
 			targetProxy = 36D638391A22287B00D36077 /* PBXContainerItemProxy */;
-		};
-		778A5E801A22CC08004015AF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Alamofire;
-			targetProxy = 778A5E7F1A22CC08004015AF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -450,7 +455,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -486,7 +491,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -499,6 +504,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Submail/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Submail/Submail-Bridging-Header.h";
@@ -512,6 +518,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Submail/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Submail/Submail-Bridging-Header.h";
