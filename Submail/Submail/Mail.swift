@@ -157,7 +157,6 @@ public class Mail {
     
     // MARK: - private helper method
     private func post(api: String, var params: [String: AnyObject]?, completion: AnyObject? -> Void) {
-//        println(params)
         let attachmentsValue: [String]? = params!["attachments"] as? [String]
         params?.removeValueForKey("attachments")
         
@@ -171,7 +170,7 @@ public class Mail {
                 } else {
                     for filePath in attachments {
                         let url = NSURL.fileURLWithPath(filePath, isDirectory: false)
-                        formData.appendPartWithFileURL(url, name: "attachments", error: nil)
+                        formData.appendPartWithFileURL(url, name: "attachments[]", error: nil)
                     }
                 }
             }

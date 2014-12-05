@@ -30,7 +30,6 @@
 		778A5E831A22CC94004015AF /* MailSendDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778A5E821A22CC94004015AF /* MailSendDemo.swift */; };
 		778A5E851A22CCD6004015AF /* MailXSend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778A5E841A22CCD6004015AF /* MailXSend.swift */; };
 		778A5E871A22CCE5004015AF /* MailXSendDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778A5E861A22CCE5004015AF /* MailXSendDemo.swift */; };
-		77919B9B1A2F2F970088BD56 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 77919B9A1A2F2F970088BD56 /* test.png */; };
 		77919BB21A30297C0088BD56 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 77919BA01A30297C0088BD56 /* AFHTTPRequestOperation.m */; };
 		77919BB31A30297C0088BD56 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 77919BA21A30297C0088BD56 /* AFHTTPRequestOperationManager.m */; };
 		77919BB41A30297C0088BD56 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 77919BA41A30297C0088BD56 /* AFHTTPSessionManager.m */; };
@@ -40,7 +39,8 @@
 		77919BB81A30297C0088BD56 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 77919BAD1A30297C0088BD56 /* AFURLRequestSerialization.m */; };
 		77919BB91A30297C0088BD56 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 77919BAF1A30297C0088BD56 /* AFURLResponseSerialization.m */; };
 		77919BBA1A30297C0088BD56 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 77919BB11A30297C0088BD56 /* AFURLSessionManager.m */; };
-		77919BBC1A304E5F0088BD56 /* test2.png in Resources */ = {isa = PBXBuildFile; fileRef = 77919BBB1A304E5F0088BD56 /* test2.png */; };
+		77919BBF1A31556F0088BD56 /* test2.png in Resources */ = {isa = PBXBuildFile; fileRef = 77919BBE1A31556F0088BD56 /* test2.png */; };
+		77919BC11A31557D0088BD56 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 77919BC01A31557D0088BD56 /* test.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,7 +96,6 @@
 		778A5E821A22CC94004015AF /* MailSendDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MailSendDemo.swift; path = ../MailSendDemo.swift; sourceTree = "<group>"; };
 		778A5E841A22CCD6004015AF /* MailXSend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailXSend.swift; sourceTree = "<group>"; };
 		778A5E861A22CCE5004015AF /* MailXSendDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MailXSendDemo.swift; path = ../MailXSendDemo.swift; sourceTree = "<group>"; };
-		77919B9A1A2F2F970088BD56 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		77919B9F1A30297C0088BD56 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		77919BA01A30297C0088BD56 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		77919BA11A30297C0088BD56 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -116,7 +115,8 @@
 		77919BAF1A30297C0088BD56 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		77919BB01A30297C0088BD56 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		77919BB11A30297C0088BD56 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		77919BBB1A304E5F0088BD56 /* test2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test2.png; sourceTree = "<group>"; };
+		77919BBE1A31556F0088BD56 /* test2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test2.png; sourceTree = "<group>"; };
+		77919BC01A31557D0088BD56 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,8 +217,8 @@
 				778A5E821A22CC94004015AF /* MailSendDemo.swift */,
 				778A5E861A22CCE5004015AF /* MailXSendDemo.swift */,
 				77596ABE1A23374100053E3B /* MessageXSendDemo.swift */,
-				77919BBB1A304E5F0088BD56 /* test2.png */,
-				77919B9A1A2F2F970088BD56 /* test.png */,
+				77919BBE1A31556F0088BD56 /* test2.png */,
+				77919BC01A31557D0088BD56 /* test.png */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -331,10 +331,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				36D6382E1A22287B00D36077 /* Main.storyboard in Resources */,
+				77919BC11A31557D0088BD56 /* test.png in Resources */,
 				36D638331A22287B00D36077 /* LaunchScreen.xib in Resources */,
+				77919BBF1A31556F0088BD56 /* test2.png in Resources */,
 				36D638301A22287B00D36077 /* Images.xcassets in Resources */,
-				77919BBC1A304E5F0088BD56 /* test2.png in Resources */,
-				77919B9B1A2F2F970088BD56 /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
