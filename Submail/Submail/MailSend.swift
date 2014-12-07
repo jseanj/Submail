@@ -6,15 +6,9 @@
 //  Copyright (c) 2014年 jin.shang. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class MailSend {
-    // appid
-    // from
-    // subject
-    // signature
-    
-    // optional
     var to = [(String, String?)]()
     var from: String = ""
     var fromName: String?
@@ -48,54 +42,63 @@ class MailSend {
         self.addressbook.append(addressbook)
     }
     
-    func set_from(address: String) {
+    // set from and from_name
+    func set_from(address: String, _ name: String? = nil) {
         self.from = address
-    }
-    
-    func set_fromname(name: String) {
         self.fromName = name
     }
     
+    // set reply address
     func set_reply(reply: String) {
         self.reply = reply
     }
     
+    // set cc recipient to array
     func add_cc(address: String, _ name: String? = nil) {
         self.cc.append((address, name))
     }
     
+    // set bcc recipient to array
     func add_bcc(address: String, _ name: String? = nil) {
         self.bcc.append((address, name))
     }
 
+    // set email subject
     func set_subject(subject: String) {
         self.subject = subject
     }
     
+    // set email text content
     func set_text(text: String) {
         self.text = text
     }
     
+    // set email html content
     func set_html(html: String) {
         self.html = html
     }
     
+    // set var to array
     func add_var(key: String, _ val: String) {
         self.vars[key] = val
     }
     
+    // set link var to array
     func add_link(key: String, _ val: String) {
         self.links[key] = val
     }
     
+    // set attachment to array
     func add_attachment(attachment: String) {
         self.attachments.append(attachment)
     }
     
-    func add_header(key: String, _ val: String) {
+    // set headers to array
+    func add_headers(key: String, _ val: String) {
         self.headers[key] = val
     }
     
+    // build request params
     func build_params() -> [String: AnyObject] {
         var params = [String: AnyObject]()
         if self.to.count > 0 {
@@ -164,8 +167,7 @@ class MailSend {
         if self.html != nil {
             params["html"] = self.html!
         }
-        
-        // vars and links and headers need json
+
         if self.vars.count > 0 {
             let jsonData = NSJSONSerialization.dataWithJSONObject(self.vars, options: nil, error: nil)
             if let data = jsonData {
@@ -194,6 +196,7 @@ class MailSend {
         return params
     }
     
+    // send mail
     func send(completion: (AnyObject? -> Void)? = nil) {
         let mail = Mail(config: self.config)
 

@@ -12,6 +12,5 @@
 
 - (NSString *)md5;
 - (NSString *)sha1;
-- (NSDictionary *)jsonStringToDictionary;
 
 @end

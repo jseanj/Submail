@@ -22,8 +22,7 @@ public class MailSendDemo {
         submail.add_addressbook("subscribe")
         
         // set email sender address and name
-        submail.set_from("no-reply@submail.cn")
-        //submail.set_fromname("SUBMAIL")
+        submail.set_from("no-reply@submail.cn", "leo")
         
         // set email reply address
         submail.set_reply("service@submail.cn")
@@ -47,21 +46,15 @@ public class MailSendDemo {
         submail.add_link("store", "http://submail.cn/chs/store")
         
         // email headers
-        submail.add_header("X-Accept", "zh-cn")
-        submail.add_header("X-Mailer", "leo App")
+        submail.add_headers("X-Accept", "zh-cn")
+        submail.add_headers("X-Mailer", "leo App")
         
         // email attachment
-        //submail.add_attachment("/root/test")
-        //submail.add_attachment("test.png")
         let file = NSBundle.mainBundle().pathForResource("test", ofType: "png")
         if file != nil {
             submail.add_attachment(file!)
         }
-        let file2 = NSBundle.mainBundle().pathForResource("test2", ofType: "png")
-        if file2 != nil {
-            submail.add_attachment(file2!)
-        }
-        
+
         submail.send()
     }
 }

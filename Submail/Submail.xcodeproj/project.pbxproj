@@ -17,7 +17,6 @@
 		36D6384B1A22289B00D36077 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D6384A1A22289B00D36077 /* Message.swift */; };
 		36D6384D1A2228AA00D36077 /* MailSend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D6384C1A2228AA00D36077 /* MailSend.swift */; };
 		36D6384F1A22291200D36077 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D6384E1A22291200D36077 /* Config.swift */; };
-		774CE3E31A2C4B1A00EDD891 /* CommonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774CE3E21A2C4B1A00EDD891 /* CommonExtension.swift */; };
 		774CE3EB1A2ED85100EDD891 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 774CE3E91A2ED85100EDD891 /* NSString+Helper.m */; };
 		77596AAD1A232D1C00053E3B /* AddressbookMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77596AAC1A232D1C00053E3B /* AddressbookMail.swift */; };
 		77596AB01A232D3A00053E3B /* AddressbookMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77596AAF1A232D3A00053E3B /* AddressbookMessage.swift */; };
@@ -39,7 +38,6 @@
 		77919BB81A30297C0088BD56 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 77919BAD1A30297C0088BD56 /* AFURLRequestSerialization.m */; };
 		77919BB91A30297C0088BD56 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 77919BAF1A30297C0088BD56 /* AFURLResponseSerialization.m */; };
 		77919BBA1A30297C0088BD56 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 77919BB11A30297C0088BD56 /* AFURLSessionManager.m */; };
-		77919BBF1A31556F0088BD56 /* test2.png in Resources */ = {isa = PBXBuildFile; fileRef = 77919BBE1A31556F0088BD56 /* test2.png */; };
 		77919BC11A31557D0088BD56 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 77919BC01A31557D0088BD56 /* test.png */; };
 /* End PBXBuildFile section */
 
@@ -77,24 +75,23 @@
 		36D638381A22287B00D36077 /* SubmailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubmailTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36D6383D1A22287B00D36077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36D6383E1A22287B00D36077 /* SubmailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmailTests.swift; sourceTree = "<group>"; };
-		36D638481A22289000D36077 /* Mail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mail.swift; sourceTree = "<group>"; };
-		36D6384A1A22289B00D36077 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		36D6384C1A2228AA00D36077 /* MailSend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailSend.swift; sourceTree = "<group>"; };
-		36D6384E1A22291200D36077 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		774CE3E21A2C4B1A00EDD891 /* CommonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonExtension.swift; sourceTree = "<group>"; };
-		774CE3E81A2ED84F00EDD891 /* Submail-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Submail-Bridging-Header.h"; sourceTree = "<group>"; };
-		774CE3E91A2ED85100EDD891 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
-		774CE3EA1A2ED85100EDD891 /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
-		77596AAC1A232D1C00053E3B /* AddressbookMail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressbookMail.swift; sourceTree = "<group>"; };
-		77596AAF1A232D3A00053E3B /* AddressbookMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressbookMessage.swift; sourceTree = "<group>"; };
+		36D638481A22289000D36077 /* Mail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mail.swift; path = ../../Mail.swift; sourceTree = "<group>"; };
+		36D6384A1A22289B00D36077 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = ../../Message.swift; sourceTree = "<group>"; };
+		36D6384C1A2228AA00D36077 /* MailSend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MailSend.swift; path = ../../MailSend.swift; sourceTree = "<group>"; };
+		36D6384E1A22291200D36077 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Config.swift; path = Submail/Config.swift; sourceTree = SOURCE_ROOT; };
+		774CE3E81A2ED84F00EDD891 /* Submail-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Submail-Bridging-Header.h"; path = "../Submail-Bridging-Header.h"; sourceTree = "<group>"; };
+		774CE3E91A2ED85100EDD891 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Helper.m"; path = "../NSString+Helper.m"; sourceTree = "<group>"; };
+		774CE3EA1A2ED85100EDD891 /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Helper.h"; path = "../NSString+Helper.h"; sourceTree = "<group>"; };
+		77596AAC1A232D1C00053E3B /* AddressbookMail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressbookMail.swift; path = ../../AddressbookMail.swift; sourceTree = "<group>"; };
+		77596AAF1A232D3A00053E3B /* AddressbookMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressbookMessage.swift; path = ../../AddressbookMessage.swift; sourceTree = "<group>"; };
 		77596AB31A23351A00053E3B /* AddressbookMailSubscribeDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressbookMailSubscribeDemo.swift; path = ../AddressbookMailSubscribeDemo.swift; sourceTree = "<group>"; };
 		77596AB51A23354700053E3B /* AddressbookMailUnsubscribeDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressbookMailUnsubscribeDemo.swift; path = ../AddressbookMailUnsubscribeDemo.swift; sourceTree = "<group>"; };
 		77596AB71A23356000053E3B /* AddressbookMessageSubscribeDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressbookMessageSubscribeDemo.swift; path = ../AddressbookMessageSubscribeDemo.swift; sourceTree = "<group>"; };
 		77596AB91A23358200053E3B /* AddressbookMessageUnsubscribeDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressbookMessageUnsubscribeDemo.swift; path = ../AddressbookMessageUnsubscribeDemo.swift; sourceTree = "<group>"; };
 		77596ABE1A23374100053E3B /* MessageXSendDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageXSendDemo.swift; sourceTree = "<group>"; };
-		77596AC01A23375800053E3B /* MessageXSend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageXSend.swift; sourceTree = "<group>"; };
+		77596AC01A23375800053E3B /* MessageXSend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageXSend.swift; path = ../../MessageXSend.swift; sourceTree = "<group>"; };
 		778A5E821A22CC94004015AF /* MailSendDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MailSendDemo.swift; path = ../MailSendDemo.swift; sourceTree = "<group>"; };
-		778A5E841A22CCD6004015AF /* MailXSend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailXSend.swift; sourceTree = "<group>"; };
+		778A5E841A22CCD6004015AF /* MailXSend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MailXSend.swift; path = ../../MailXSend.swift; sourceTree = "<group>"; };
 		778A5E861A22CCE5004015AF /* MailXSendDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MailXSendDemo.swift; path = ../MailXSendDemo.swift; sourceTree = "<group>"; };
 		77919B9F1A30297C0088BD56 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		77919BA01A30297C0088BD56 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
@@ -115,7 +112,6 @@
 		77919BAF1A30297C0088BD56 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		77919BB01A30297C0088BD56 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		77919BB11A30297C0088BD56 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		77919BBE1A31556F0088BD56 /* test2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test2.png; sourceTree = "<group>"; };
 		77919BC01A31557D0088BD56 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,25 +155,16 @@
 			isa = PBXGroup;
 			children = (
 				77919B9E1A30297C0088BD56 /* AFNetworking */,
+				7706C1BE1A33FB4E00385D30 /* Utils */,
+				7706C1BD1A33FB3100385D30 /* Config */,
+				7706C1BC1A33FB0A00385D30 /* Lib */,
 				77596ABB1A2336C200053E3B /* Demo */,
 				36D638281A22287B00D36077 /* AppDelegate.swift */,
 				36D6382A1A22287B00D36077 /* ViewController.swift */,
-				77596AAC1A232D1C00053E3B /* AddressbookMail.swift */,
-				77596AAF1A232D3A00053E3B /* AddressbookMessage.swift */,
-				36D6384A1A22289B00D36077 /* Message.swift */,
-				77596AC01A23375800053E3B /* MessageXSend.swift */,
-				36D638481A22289000D36077 /* Mail.swift */,
-				36D6384C1A2228AA00D36077 /* MailSend.swift */,
-				778A5E841A22CCD6004015AF /* MailXSend.swift */,
-				36D6384E1A22291200D36077 /* Config.swift */,
-				774CE3E21A2C4B1A00EDD891 /* CommonExtension.swift */,
-				774CE3E91A2ED85100EDD891 /* NSString+Helper.m */,
-				774CE3EA1A2ED85100EDD891 /* NSString+Helper.h */,
 				36D6382C1A22287B00D36077 /* Main.storyboard */,
 				36D6382F1A22287B00D36077 /* Images.xcassets */,
 				36D638311A22287B00D36077 /* LaunchScreen.xib */,
 				36D638261A22287B00D36077 /* Supporting Files */,
-				774CE3E81A2ED84F00EDD891 /* Submail-Bridging-Header.h */,
 			);
 			path = Submail;
 			sourceTree = "<group>";
@@ -207,6 +194,39 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7706C1BC1A33FB0A00385D30 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				77596AAC1A232D1C00053E3B /* AddressbookMail.swift */,
+				77596AAF1A232D3A00053E3B /* AddressbookMessage.swift */,
+				36D6384A1A22289B00D36077 /* Message.swift */,
+				77596AC01A23375800053E3B /* MessageXSend.swift */,
+				36D638481A22289000D36077 /* Mail.swift */,
+				36D6384C1A2228AA00D36077 /* MailSend.swift */,
+				778A5E841A22CCD6004015AF /* MailXSend.swift */,
+			);
+			name = Lib;
+			path = Demo/Lib;
+			sourceTree = "<group>";
+		};
+		7706C1BD1A33FB3100385D30 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				36D6384E1A22291200D36077 /* Config.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		7706C1BE1A33FB4E00385D30 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				774CE3E81A2ED84F00EDD891 /* Submail-Bridging-Header.h */,
+				774CE3E91A2ED85100EDD891 /* NSString+Helper.m */,
+				774CE3EA1A2ED85100EDD891 /* NSString+Helper.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		77596ABB1A2336C200053E3B /* Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,7 +237,6 @@
 				778A5E821A22CC94004015AF /* MailSendDemo.swift */,
 				778A5E861A22CCE5004015AF /* MailXSendDemo.swift */,
 				77596ABE1A23374100053E3B /* MessageXSendDemo.swift */,
-				77919BBE1A31556F0088BD56 /* test2.png */,
 				77919BC01A31557D0088BD56 /* test.png */,
 			);
 			path = Demo;
@@ -333,7 +352,6 @@
 				36D6382E1A22287B00D36077 /* Main.storyboard in Resources */,
 				77919BC11A31557D0088BD56 /* test.png in Resources */,
 				36D638331A22287B00D36077 /* LaunchScreen.xib in Resources */,
-				77919BBF1A31556F0088BD56 /* test2.png in Resources */,
 				36D638301A22287B00D36077 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,7 +395,6 @@
 				778A5E871A22CCE5004015AF /* MailXSendDemo.swift in Sources */,
 				36D6384F1A22291200D36077 /* Config.swift in Sources */,
 				778A5E851A22CCD6004015AF /* MailXSend.swift in Sources */,
-				774CE3E31A2C4B1A00EDD891 /* CommonExtension.swift in Sources */,
 				774CE3EB1A2ED85100EDD891 /* NSString+Helper.m in Sources */,
 				77596AB61A23354700053E3B /* AddressbookMailUnsubscribeDemo.swift in Sources */,
 			);

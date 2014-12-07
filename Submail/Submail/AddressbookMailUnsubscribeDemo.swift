@@ -12,6 +12,6 @@ public class AddressbookMailUnsubscribeDemo {
     public class func demo() {
         var addressbook = AddressbookMail(config: MailConfig())
         addressbook.set_address("leo@apple.cn", "leo")
-        addressbook.unsubscribe()
+        addressbook.unsubscribe() 
     }
 }

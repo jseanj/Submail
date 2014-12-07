@@ -46,13 +46,4 @@
     return output;
 }
 
-- (NSDictionary *)jsonStringToDictionary {
-    NSData *jsonData = [self dataUsingEncoding:NSUTF8StringEncoding];
-    
-    NSError *error = nil;
-    NSDictionary *myDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
-    
-    return myDictionary;
-}
-
 @end

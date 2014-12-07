@@ -8,8 +8,6 @@
 
 import Foundation
 
-let apiUrl = "http://114.80.208.100:83/"
-
 // Mail Config
 let mail_appid = "10034" //"your_mail_app_id"
 

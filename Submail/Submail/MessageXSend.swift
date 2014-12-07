@@ -27,19 +27,22 @@ class MessageXSend {
         self.to.append(address)
     }
     
-    // set addressbook
+    // set addressbook sign to array
     func add_addressbook(addressbook: String) {
         self.addressbook.append(addressbook)
     }
     
+    // set project
     func set_project(project: String) {
         self.project = project
     }
     
+    // set var to array
     func add_var(key: String, _ val: String) {
         self.vars[key] = val
     }
     
+    // build request params
     func build_params() -> [String: AnyObject] {
         var params = [String: AnyObject]()
         if self.to.count > 0 {
@@ -60,7 +63,6 @@ class MessageXSend {
 
         params["project"] = self.project
         
-        // vars and links and headers need json
         if self.vars.count > 0 {
             let jsonData = NSJSONSerialization.dataWithJSONObject(self.vars, options: nil, error: nil)
             if let data = jsonData {

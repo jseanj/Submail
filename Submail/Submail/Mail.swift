@@ -27,7 +27,7 @@ public class Mail {
     // MARK: - API
     public func send(params: [String: AnyObject]?, completion: AnyObject? -> Void) {
         // API httpRequest URL
-        let api = "http://114.80.208.100:83/mail/send.json"
+        let api = "https://api.submail.cn/mail/send.json"
         var requestParams = [String: AnyObject]()
         if params != nil {
             requestParams = params!
@@ -49,7 +49,6 @@ public class Mail {
                     }
                 }
                 requestParams["signature"] = self.createSignature(requestParams)
-//                println(requestParams)
                 self.post(api, params: requestParams) {
                     JSON in
                     completion(JSON)
@@ -60,7 +59,7 @@ public class Mail {
     
     public func xsend(params: [String: AnyObject]?, completion: AnyObject? -> Void) {
         // API httpRequest URL
-        let api = "http://114.80.208.100:83/mail/xsend.json"
+        let api = "https://api.submail.cn/mail/xsend.json"
         var requestParams = [String: AnyObject]()
         if params != nil {
             requestParams = params!
@@ -92,7 +91,7 @@ public class Mail {
     
     public func subscribe(params: [String: AnyObject]?, completion: AnyObject? -> Void) {
         // API httpRequest URL
-        let api = "http://114.80.208.100:83/addressbook/mail/subscribe.json"
+        let api = "https://api.submail.cn/addressbook/mail/subscribe.json"
         var requestParams = [String: AnyObject]()
         if params != nil {
             requestParams = params!
@@ -114,7 +113,6 @@ public class Mail {
                     }
                 }
                 requestParams["signature"] = self.createSignature(requestParams)
-//                println(requestParams)
                 self.post(api, params: requestParams) {
                     JSON in
                     completion(JSON)
@@ -125,7 +123,7 @@ public class Mail {
     
     public func unsubscribe(params: [String: AnyObject]?, completion: AnyObject? -> Void) {
         // API httpRequest URL
-        let api = "http://114.80.208.100:83/addressbook/mail/unsubscribe.json"
+        let api = "https://api.submail.cn/addressbook/mail/unsubscribe.json"
         var requestParams = [String: AnyObject]()
         if params != nil {
             requestParams = params!
@@ -176,7 +174,6 @@ public class Mail {
             }
         }, success: {
             _, JSON in
-            println(JSON)
             completion(JSON)
         }) {
             _, error in
@@ -194,7 +191,7 @@ public class Mail {
     }
     
     private func getTimestamp(completion: String -> Void) {
-        let api = "http://114.80.208.100:83/service/timestamp.json"
+        let api = "https://api.submail.cn/service/timestamp.json"
         get(api, params: nil) {
             JSON in
             if let json = JSON as [String: AnyObject]? {
@@ -230,8 +227,6 @@ public class Mail {
         signStr = signStr.substringToIndex(advance(signStr.startIndex, signStr.utf16Count-1))
         
         signStr = self.appId + self.appKey + signStr + self.appId + self.appKey
-
-//        println("===\(signStr)")
         
         if self.signType == "md5" {
 

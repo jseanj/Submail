@@ -40,46 +40,53 @@ class MailXSend {
         self.addressbook.append(addressbook)
     }
     
-    func set_from(address: String) {
+    // set from and from_name
+    func set_from(address: String, _ name: String? = nil) {
         self.from = address
-    }
-    
-    func set_fromname(name: String) {
         self.fromName = name
     }
     
+    // set reply address
     func set_reply(reply: String) {
         self.reply = reply
     }
     
+    // set cc recipient to array
     func add_cc(address: String, _ name: String? = nil) {
         self.cc.append((address, name))
     }
     
+    // set bcc recipient to array
     func add_bcc(address: String, _ name: String? = nil) {
         self.bcc.append((address, name))
     }
     
+    // set email subject
     func set_subject(subject: String) {
         self.subject = subject
     }
     
+    // set email project
     func set_project(project: String) {
         self.project = project
     }
     
+    // set var to array
     func add_var(key: String, _ val: String) {
         self.vars[key] = val
     }
     
+    // set link var to array
     func add_link(key: String, _ val: String) {
         self.links[key] = val
     }
     
-    func add_header(key: String, _ val: String) {
+    // set headers to array
+    func add_headers(key: String, _ val: String) {
         self.headers[key] = val
     }
     
+    // build request params
     func build_params() -> [String: AnyObject] {
         var params = [String: AnyObject]()
         if self.to.count > 0 {
@@ -172,6 +179,7 @@ class MailXSend {
         return params
     }
     
+    // xsend mail
     func xsend(completion: (AnyObject? -> Void)? = nil) {
         let mail = Mail(config: self.config)
         mail.xsend(build_params()) {
